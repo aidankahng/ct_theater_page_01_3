@@ -1,14 +1,15 @@
+/* GLOBAL STYLING */
 * {
     box-sizing: border-box;
     margin: 0;
-
+    /* font-family: sans-serif; */
 }
 
 .grid-container {
     width: 100vw;
     height: 100vh;
     display: grid;
-    grid-template-rows: .25fr 1fr 1fr 1fr;
+    grid-template-rows: 10vh 40vh minmax(min-content, max-content) 30vh;
     grid-template-columns: .2fr 1fr .2fr;
     grid-template-areas: 
         "nav nav nav"
@@ -17,6 +18,7 @@
         "footer footer footer";
 }
 
+/* NAV SECTION STYLING */
 .nav-section {
     grid-area: nav;
     display: flex;
@@ -33,20 +35,116 @@
     color: white;
 }
 
+.nav-links a:hover {
+    color: rgb(255, 227, 167);
+}
+
+/* TITLE SECTION STYLING */
 .title-section{
     grid-area: title;
     display: flex;
     align-items: center;
     justify-content: center;
     background-image: url("../imgs/title.png");
-    
     background-size: 100% 100%;
 }
 
-.show-section {
-    grid-area: shows;
+.title-section p {
+    font-size: 4rem;
+    color: white;
 }
 
+/* SHOW SECTION STYLING */
+.show-section {
+    width: 100%;
+    grid-area: shows;
+    height: 100%;
+}
+
+.show-flex {
+    display: flex;
+    flex-direction: column;
+}
+
+.month {
+    margin-top: 100px;
+    margin-bottom: 40px;
+    background-color: rgb(211, 211, 211);
+    font-size: larger;
+    padding: 3px 0 3px 40px;
+    border: 1px solid black;    
+}
+
+.show {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+    padding-bottom: 1.7rem;
+    margin-bottom: 40px;
+}
+
+.show img {
+    max-width: 20%;
+    height: auto;
+}
+
+.show-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+
+/* .show-text * {
+    margin-bottom: 15px;
+} */
+
+.button-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.button-div button {
+    padding: .7rem;
+    background-color: rgb(253, 180, 45);
+    color: white;
+    border: 1px solid black;
+    font-size: larger;
+}
+
+
+
+
+/* FOOTER SECTION STYLING */
 .footer-section {
     grid-area: footer;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "map info shows social";
+    background-color: rgb(47, 34, 58);
+    color: white;
+}
+
+.footer-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.footer-flex{
+    display: flex;
+    align-items: center;
+}
+
+.footer-list a {
+    color: white;
+    text-decoration: none;
+}
+
+.icon {
+    width: 30px;
+    height: auto;
+    filter: invert(62%) sepia(71%) saturate(537%) hue-rotate(339deg) brightness(105%) contrast(89%);
 }
