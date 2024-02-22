@@ -43,6 +43,9 @@
     justify-content: space-around;
     background-color: black;
     color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
 
 .nav-links a {
