@@ -118,13 +118,49 @@
 
 /* FOOTER SECTION STYLING */
 .footer-section {
+    width: 100%;
     grid-area: footer;
     display: grid;
     grid-template-columns: 1fr 1.5fr 1fr 1fr;
-    grid-template-rows: 1fr;
+    grid-template-rows: auto;
     grid-template-areas: "map info shows social";
     background-color: rgb(47, 34, 58);
     color: white;
+}
+
+.footer-map {
+    width: 100%;
+    grid-area: map;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.footer-map .map {
+    margin-bottom: 20px;
+}
+
+.google-map {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.google-map iframe {
+    height: 100%;
+    width: 100%;
+}
+
+.footer-info {
+    width: 100%;
+    grid-area: info;
+}
+.footer-shows {
+    width: 100%;
+    grid-area: shows;
+}
+.footer-social {
+    width: 100%;
+    grid-area: social;
 }
 
 .footer-list {
@@ -140,6 +176,11 @@
 
 .footer-list a {
     color: white;
+    text-decoration: none;
+}
+
+.footer-list a:hover {
+    color: rgb(255, 124, 124);
     text-decoration: none;
 }
 
