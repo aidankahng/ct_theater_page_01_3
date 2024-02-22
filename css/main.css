@@ -10,7 +10,7 @@
     height: 100vh;
     display: grid;
     grid-template-rows: 10vh 40vh minmax(min-content, max-content) 30vh;
-    grid-template-columns: .2fr 1fr .2fr;
+    grid-template-columns: 20px 1fr 20px;
     grid-template-areas: 
         "nav nav nav"
         "title title title"
@@ -18,11 +18,27 @@
         "footer footer footer";
 }
 
+@media (min-width: 750px) {
+    .grid-container {
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+        grid-template-rows: 10vh 40vh minmax(min-content, max-content) 30vh;
+        grid-template-columns: .2fr 1fr .2fr;
+        grid-template-areas: 
+            "nav nav nav"
+            "title title title"
+            ". shows ."
+            "footer footer footer";
+    }
+}
+
 /* NAV SECTION STYLING */
 .nav-section {
     grid-area: nav;
     display: flex;
     height: 100%;
+    width: 100%;
     align-items: center;
     justify-content: space-around;
     background-color: black;
@@ -113,15 +129,12 @@
     font-size: larger;
 }
 
-
-
-
 /* FOOTER SECTION STYLING */
 .footer-section {
     width: 100%;
     grid-area: footer;
     display: grid;
-    grid-template-columns: 1fr 1.5fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
     grid-template-areas: "map info shows social";
     background-color: rgb(47, 34, 58);
